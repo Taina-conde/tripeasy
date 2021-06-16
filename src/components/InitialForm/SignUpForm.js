@@ -37,7 +37,7 @@ const SignUpForm = () => {
     onSubmit: (values) => {},
   });
   return (
-    <Form onSubmit={formik.handleSubmit}>
+    <Form noValidate onSubmit={formik.handleSubmit}>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formUsername">
           <Form.Label>Username ICON</Form.Label>
@@ -47,8 +47,12 @@ const SignUpForm = () => {
             name="username"
             value={formik.values.username}
             onChange={formik.handleChange}
-            isInvalid={!!formik.errors.username}
+            isInvalid={
+              formik.touched.username && !!Boolean(formik.errors.username)
+            }
+            isValid={formik.touched.username && !formik.errors.username}
           />
+          
           <Form.Control.Feedback type="invalid">
             {formik.errors.username}
           </Form.Control.Feedback>
@@ -60,11 +64,13 @@ const SignUpForm = () => {
           <Form.Control
             type="email"
             placeholder="Email"
-            name = "email"
+            name="email"
             value={formik.values.email}
             onChange={formik.handleChange}
-            isInvalid={!!formik.errors.email}
+            isInvalid={formik.touched.email && !!Boolean(formik.errors.email)}
+            isValid={formik.touched.email && !formik.errors.email}
           />
+          
           <Form.Control.Feedback type="invalid">
             {formik.errors.email}
           </Form.Control.Feedback>
@@ -76,11 +82,14 @@ const SignUpForm = () => {
           <Form.Control
             type="password"
             placeholder="Password"
-            name = "password"
+            name="password"
             value={formik.values.password}
             onChange={formik.handleChange}
-            isInvalid={!!formik.errors.password}
+            isInvalid={
+              formik.touched.password && !!Boolean(formik.errors.password)
+            }
           />
+          
           <Form.Control.Feedback type="invalid">
             {formik.errors.password}
           </Form.Control.Feedback>
@@ -89,7 +98,6 @@ const SignUpForm = () => {
             one lowercase letter, one uppercase letter, one numeric digit, and
             one special character.
           </Form.Text>
-          
         </Form.Group>
       </Row>
       <Row>
