@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 import SignUpForm from "./SignUpForm";
 import SignInForm from "./SignInForm";
+import Container from "react-bootstrap/Container";
 
 const InitialForm = () => {
   const [signUp, setSignUp] = useState(true)
-  return <div>
+  return <Container>
       <h1>{signUp ? "Create your account" : "Sign in "}</h1>
       {signUp ? <SignUpForm/> : <SignInForm/>}
 
-  </div>;
+  </Container>;
 };
 export default InitialForm;
