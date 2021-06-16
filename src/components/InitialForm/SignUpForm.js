@@ -3,6 +3,11 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
+import {
+  HiMail,
+  HiUser,
+  HiLockClosed,
+} from "react-icons/hi";
 
 const SignUpForm = () => {
   const formik = useFormik({
@@ -40,7 +45,9 @@ const SignUpForm = () => {
     <Form noValidate onSubmit={formik.handleSubmit}>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formUsername">
-          <Form.Label>Username ICON</Form.Label>
+          <Form.Label>
+            <HiUser />
+          </Form.Label>
           <Form.Control
             type="text"
             placeholder="Username"
@@ -52,7 +59,7 @@ const SignUpForm = () => {
             }
             isValid={formik.touched.username && !formik.errors.username}
           />
-          
+
           <Form.Control.Feedback type="invalid">
             {formik.errors.username}
           </Form.Control.Feedback>
@@ -60,7 +67,9 @@ const SignUpForm = () => {
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formEmail">
-          <Form.Label>Email ICON</Form.Label>
+          <Form.Label>
+            <HiMail />
+          </Form.Label>
           <Form.Control
             type="email"
             placeholder="Email"
@@ -70,7 +79,7 @@ const SignUpForm = () => {
             isInvalid={formik.touched.email && !!Boolean(formik.errors.email)}
             isValid={formik.touched.email && !formik.errors.email}
           />
-          
+
           <Form.Control.Feedback type="invalid">
             {formik.errors.email}
           </Form.Control.Feedback>
@@ -78,7 +87,9 @@ const SignUpForm = () => {
       </Row>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="formPassword">
-          <Form.Label>Password ICON</Form.Label>
+          <Form.Label>
+            <HiLockClosed />
+          </Form.Label>
           <Form.Control
             type="password"
             placeholder="Password"
@@ -89,7 +100,7 @@ const SignUpForm = () => {
               formik.touched.password && !!Boolean(formik.errors.password)
             }
           />
-          
+
           <Form.Control.Feedback type="invalid">
             {formik.errors.password}
           </Form.Control.Feedback>
