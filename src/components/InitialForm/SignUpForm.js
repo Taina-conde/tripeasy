@@ -3,11 +3,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import {
-  HiMail,
-  HiUser,
-  HiLockClosed,
-} from "react-icons/hi";
+import { HiMail, HiUser, HiLockClosed } from "react-icons/hi";
 
 const SignUpForm = () => {
   const formik = useFormik({
@@ -43,11 +39,11 @@ const SignUpForm = () => {
   });
   return (
     <Form noValidate onSubmit={formik.handleSubmit}>
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formUsername">
-          <Form.Label>
-            <HiUser />
-          </Form.Label>
+      <Form.Group as={Row} className="mb-3" controlId="formUsername">
+        <Form.Label column xs={1} className="p-0 text-right align-self-center">
+          <HiUser size={20} />
+        </Form.Label>
+        <Col xs={11}>
           <Form.Control
             type="text"
             placeholder="Username"
@@ -63,13 +59,14 @@ const SignUpForm = () => {
           <Form.Control.Feedback type="invalid">
             {formik.errors.username}
           </Form.Control.Feedback>
-        </Form.Group>
-      </Row>
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formEmail">
-          <Form.Label>
-            <HiMail />
-          </Form.Label>
+        </Col>
+      </Form.Group>
+
+      <Form.Group as={Row} className="mb-3" controlId="formEmail">
+        <Form.Label column xs={1} className="p-0 text-right align-self-center">
+          <HiMail size={20} />
+        </Form.Label>
+        <Col xs={11}>
           <Form.Control
             type="email"
             placeholder="Email"
@@ -83,13 +80,14 @@ const SignUpForm = () => {
           <Form.Control.Feedback type="invalid">
             {formik.errors.email}
           </Form.Control.Feedback>
-        </Form.Group>
-      </Row>
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formPassword">
-          <Form.Label>
-            <HiLockClosed />
-          </Form.Label>
+        </Col>
+      </Form.Group>
+
+      <Form.Group as={Row} className="mb-3" controlId="formPassword">
+        <Form.Label column xs={1} className="p-0 text-right align-self-center">
+          <HiLockClosed size={20} />
+        </Form.Label>
+        <Col xs = {11}>
           <Form.Control
             type="password"
             placeholder="Password"
@@ -109,8 +107,9 @@ const SignUpForm = () => {
             one lowercase letter, one uppercase letter, one numeric digit, and
             one special character.
           </Form.Text>
-        </Form.Group>
-      </Row>
+        </Col>
+      </Form.Group>
+
       <Row>
         <Button type="submit">Submit form</Button>
       </Row>
