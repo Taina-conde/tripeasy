@@ -19,7 +19,7 @@ const CarouselCustom = () => {
         <img className="d-block w-100" src={hotel} alt="hotel" />
         <Carousel.Caption>
           <h3>Accomodation</h3>
-          <p>Find the best accomodations in your destination and manage your bookings.</p>
+          <p>Find your ideal accomodation in your destination and manage your bookings.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
