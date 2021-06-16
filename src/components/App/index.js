@@ -3,7 +3,7 @@ import CarouselCustom from "../CarouselCustom";
 function App() {
   return (
     <div>
-      
+      <CarouselCustom/>
     </div>
   );
 }
