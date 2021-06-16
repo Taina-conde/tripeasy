@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
 const SignUpForm = () => {
   const formik = useFormik({
@@ -24,7 +25,11 @@ const SignUpForm = () => {
       }
       if (!values.password) {
         errors.password = "Required";
-      } else if (!/^[A-Za-z]\w{7,14}$/i.test(values.password)) {
+      } else if (
+        !/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/i.test(
+          values.password
+        )
+      ) {
         errors.password = "Invalid password";
       }
       return errors;
@@ -38,36 +43,58 @@ const SignUpForm = () => {
           <Form.Label>Username ICON</Form.Label>
           <Form.Control
             type="text"
-            name="username"
             placeholder="Username"
+            name="username"
             value={formik.values.username}
-            onChange={formik.onChange}
+            onChange={formik.handleChange}
             isInvalid={!!formik.errors.username}
           />
           <Form.Control.Feedback type="invalid">
-            {errors.username}
+            {formik.errors.username}
           </Form.Control.Feedback>
         </Form.Group>
       </Row>
-
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formEmail">
+          <Form.Label>Email ICON</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Email"
+            name = "email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            isInvalid={!!formik.errors.email}
+          />
+          <Form.Control.Feedback type="invalid">
+            {formik.errors.email}
+          </Form.Control.Feedback>
+        </Form.Group>
+      </Row>
+      <Row className="mb-3">
+        <Form.Group as={Col} controlId="formPassword">
+          <Form.Label>Password ICON</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Password"
+            name = "password"
+            value={formik.values.password}
+            onChange={formik.handleChange}
+            isInvalid={!!formik.errors.password}
+          />
+          <Form.Control.Feedback type="invalid">
+            {formik.errors.password}
+          </Form.Control.Feedback>
+          <Form.Text className="text-muted">
+            Choose a password between 8 to 15 characters which contain at least
+            one lowercase letter, one uppercase letter, one numeric digit, and
+            one special character.
+          </Form.Text>
+          
+        </Form.Group>
+      </Row>
+      <Row>
+        <Button type="submit">Submit form</Button>
+      </Row>
     </Form>
   );
 };
