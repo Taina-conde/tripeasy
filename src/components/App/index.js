@@ -1,3 +1,4 @@
+import CarouselCustom from "../CarouselCustom";
 
 function App() {
   return (
