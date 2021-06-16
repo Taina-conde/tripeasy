@@ -40,7 +40,7 @@ const SignUpForm = () => {
   return (
     <Form noValidate onSubmit={formik.handleSubmit}>
       <Form.Group as={Row} className="mb-3" controlId="formUsername">
-        <Form.Label column xs={1} className="p-0 text-right align-self-center">
+        <Form.Label column xs={1} className="p-0 text-right">
           <HiUser size={20} />
         </Form.Label>
         <Col xs={11}>
@@ -63,7 +63,7 @@ const SignUpForm = () => {
       </Form.Group>
 
       <Form.Group as={Row} className="mb-3" controlId="formEmail">
-        <Form.Label column xs={1} className="p-0 text-right align-self-center">
+        <Form.Label column xs={1} className="p-0 text-right ">
           <HiMail size={20} />
         </Form.Label>
         <Col xs={11}>
@@ -84,7 +84,7 @@ const SignUpForm = () => {
       </Form.Group>
 
       <Form.Group as={Row} className="mb-3" controlId="formPassword">
-        <Form.Label column xs={1} className="p-0 text-right align-self-center">
+        <Form.Label column xs={1} className="p-0 text-right ">
           <HiLockClosed size={20} />
         </Form.Label>
         <Col xs = {11}>
