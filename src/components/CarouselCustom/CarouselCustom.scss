@@ -18,9 +18,11 @@ img {
 .carousel-control-prev {
   right: 50px;
   left: unset;
+  z-index: 3;
 }
 .carousel-control-next {
   right: 10px;
+  z-index: 2;
 }
 @include media-breakpoint-up(lg) {
   img {
