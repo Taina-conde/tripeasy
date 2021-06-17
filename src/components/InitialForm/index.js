@@ -11,7 +11,11 @@ const InitialForm = () => {
   };
   return (
     <Container>
-      <h1>{signUp ? "Create your account" : "Sign in "}</h1>
+      <h1>
+        <span>Trip</span>
+        <span>Easy</span>
+      </h1>
+      <h2>{signUp ? "Create your account" : "Sign in "}</h2>
       {signUp ? (
         <SignUpForm onToggleSignUp={toggleSignUpHandler} />
       ) : (

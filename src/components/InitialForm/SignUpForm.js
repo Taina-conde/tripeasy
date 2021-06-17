@@ -113,7 +113,7 @@ const SignUpForm = (props) => {
 
       <Row className="justify-content-center">
         <Col xs={4} md={12} className="text-right text-md-center p-0">
-          <Button type="submit" onClick={}>
+          <Button type="submit" onClick={formik.handleSubmit}>
             Sign Up
           </Button>
         </Col>

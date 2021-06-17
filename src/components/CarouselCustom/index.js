@@ -7,7 +7,7 @@ import budget from "../../assets/images/rupixen-com-pbgYcq3_Zx0-unsplash.jpg";
 
 const CarouselCustom = () => {
   return (
-    <Carousel>
+    <Carousel className = "h-100">
       <Carousel.Item>
         <img className="d-block w-100" src={trip} alt="trip" />
         <Carousel.Caption>

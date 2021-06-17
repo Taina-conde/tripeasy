@@ -2,8 +2,7 @@ import { useFormik } from "formik";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import SignUpButton from "./SignUpButton";
-import LoginButton from "./LoginButton";
+import Button from "react-bootstrap/Button";
 import { HiMail, HiLockClosed } from "react-icons/hi";
 
 const LoginForm = (props) => {
@@ -33,7 +32,9 @@ const LoginForm = (props) => {
       }
       return errors;
     },
-    onSubmit: (values) => {},
+    onSubmit: (values) => {
+
+    },
   });
   return (
     <Form noValidate onSubmit={formik.handleSubmit}>
@@ -82,7 +83,7 @@ const LoginForm = (props) => {
 
       <Row className="justify-content-center">
         <Col xs={4} md={12} className="text-right text-md-center p-0">
-          <Button type="submit" onClick={}>
+          <Button type="submit" onClick={formik.handleSubmit}>
             Login
           </Button>
         </Col>
