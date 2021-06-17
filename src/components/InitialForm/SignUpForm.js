@@ -112,15 +112,15 @@ const SignUpForm = (props) => {
       </Form.Group>
 
       <Row className="justify-content-center">
-        <Col xs={4} md={12} className="text-right text-md-center p-0">
+        <Col xs={4} lg={12} className="text-right text-lg-center p-0">
           <Button type="submit" onClick={formik.handleSubmit}>
             Sign Up
           </Button>
         </Col>
-        <Col xs={1} md={12} className="text-center p-0">
+        <Col xs={1} lg={12} className="text-center p-0">
           or
         </Col>
-        <Col xs={4} md={12} className="text-md-center p-0">
+        <Col xs={4} lg={12} className="text-lg-center p-0">
           <Button type="button" onClick={() => onToggleSignUp()}>
             Login
           </Button>
