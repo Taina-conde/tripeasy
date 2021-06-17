@@ -1,16 +1,40 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 
-@import 'variables';
+@import "variables";
 
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 
 img {
-    width: 100%;
+  width: 100%;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  width: 100%;
+  top: unset;
+  bottom: 10px;
+  justify-content: flex-end;
+}
+.carousel-control-prev {
+  right: 50px;
+  left: unset;
+}
+.carousel-control-next {
+  right: 10px;
 }
 @include media-breakpoint-up(lg) {
   img {
-      height: 100vh;
-      width: auto;
+    height: 100vh;
+    width: auto;
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    bottom: 25px;
+  }
+  .carousel-control-prev {
+    right: 90px;
+  }
+  .carousel-control-next {
+    right: 50px;
   }
 }
