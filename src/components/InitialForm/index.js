@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import SignUpForm from "./SignUpForm";
-import SignInForm from "./SignInForm";
+import SignInForm from "./LoginForm";
 import Container from "react-bootstrap/Container";
 
 const InitialForm = () => {
