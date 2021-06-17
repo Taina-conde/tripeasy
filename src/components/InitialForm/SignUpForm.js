@@ -2,12 +2,11 @@ import { useFormik } from "formik";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import SignUpButton  from "./SignUpButton";
-import LoginButton  from "./LoginButton";
+import Button from "react-bootstrap/Button";
 import { HiMail, HiUser, HiLockClosed } from "react-icons/hi";
 
 const SignUpForm = (props) => {
-    const { onToggleSignUp } = props;
+  const { onToggleSignUp } = props;
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -112,13 +111,19 @@ const SignUpForm = (props) => {
         </Col>
       </Form.Group>
 
-      <Row className = "justify-content-center">
-        <Col xs = {4} md ={12} className = "text-right text-md-center p-0">
-          <SignUpButton onToggleSignUp = {onToggleSignUp}/>
+      <Row className="justify-content-center">
+        <Col xs={4} md={12} className="text-right text-md-center p-0">
+          <Button type="submit" onClick={}>
+            Sign Up
+          </Button>
         </Col>
-        <Col xs = {1} md ={12} className = "text-center p-0">or</Col>
-        <Col xs = {4} md ={12} className = "text-md-center p-0">
-          <LoginButton  onToggleSignUp = {onToggleSignUp}/>
+        <Col xs={1} md={12} className="text-center p-0">
+          or
+        </Col>
+        <Col xs={4} md={12} className="text-md-center p-0">
+          <Button type="button" onClick={() => onToggleSignUp()}>
+            Login
+          </Button>
         </Col>
       </Row>
     </Form>
