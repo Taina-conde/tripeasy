@@ -2,7 +2,8 @@ import { useFormik } from "formik";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+import SignUpButton  from "./SignUpButton";
+import LoginButton  from "./LoginButton";
 import { HiMail, HiUser, HiLockClosed } from "react-icons/hi";
 
 const SignUpForm = () => {
@@ -87,7 +88,7 @@ const SignUpForm = () => {
         <Form.Label column xs={1} className="p-0 text-right ">
           <HiLockClosed size={20} />
         </Form.Label>
-        <Col xs = {11}>
+        <Col xs={11}>
           <Form.Control
             type="password"
             placeholder="Password"
@@ -110,8 +111,14 @@ const SignUpForm = () => {
         </Col>
       </Form.Group>
 
-      <Row>
-        <Button type="submit">Submit form</Button>
+      <Row className = "justify-content-center">
+        <Col xs = {4} md ={12} className = "text-right text-md-center p-0">
+          <SignUpButton/>
+        </Col>
+        <Col xs = {1} md ={12} className = "text-center p-0">or</Col>
+        <Col xs = {4} md ={12} className = "text-md-center p-0">
+          <LoginButton/>
+        </Col>
       </Row>
     </Form>
   );
