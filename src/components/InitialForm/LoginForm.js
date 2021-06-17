@@ -4,9 +4,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import SignUpButton  from "./SignUpButton";
 import LoginButton  from "./LoginButton";
-import { HiMail, HiUser, HiLockClosed } from "react-icons/hi";
+import { HiMail, HiLockClosed } from "react-icons/hi";
 
-const LoginForm = () => {
+const LoginForm = (props) => {
+  const { onToggleSignUp } = props;
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -81,12 +82,11 @@ const LoginForm = () => {
 
       <Row className = "justify-content-center">
         <Col xs = {4} md ={12} className = "text-right text-md-center p-0">
-          <Login
-        Button/>
+          <LoginButton onToggleSignUp = {onToggleSignUp}/>
         </Col>
         <Col xs = {1} md ={12} className = "text-center p-0">or</Col>
         <Col xs = {4} md ={12} className = "text-md-center p-0">
-          <LoginButton/>
+          <SignUpButton onToggleSignUp = {onToggleSignUp}/>
         </Col>
       </Row>
     </Form>

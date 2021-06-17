@@ -6,7 +6,8 @@ import SignUpButton  from "./SignUpButton";
 import LoginButton  from "./LoginButton";
 import { HiMail, HiUser, HiLockClosed } from "react-icons/hi";
 
-const SignUpForm = () => {
+const SignUpForm = (props) => {
+    const { onToggleSignUp } = props;
   const formik = useFormik({
     initialValues: {
       username: "",
@@ -113,11 +114,11 @@ const SignUpForm = () => {
 
       <Row className = "justify-content-center">
         <Col xs = {4} md ={12} className = "text-right text-md-center p-0">
-          <SignUpButton/>
+          <SignUpButton onToggleSignUp = {onToggleSignUp}/>
         </Col>
         <Col xs = {1} md ={12} className = "text-center p-0">or</Col>
         <Col xs = {4} md ={12} className = "text-md-center p-0">
-          <LoginButton/>
+          <LoginButton  onToggleSignUp = {onToggleSignUp}/>
         </Col>
       </Row>
     </Form>

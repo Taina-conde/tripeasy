@@ -1,7 +1,8 @@
 import Button from "react-bootstrap/Button";
-const LoginButton = () => {
+const LoginButton = (props) => {
+    const { onToggleSignUp } = props;
     return (
-        <Button type="button">
+        <Button type="button" onClick = {() => onToggleSignUp()}>
             Login
         </Button>
     )
