@@ -23,3 +23,10 @@ body {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
   }
+
+  @font-face {
+    font-family: "Fillate";
+    src: local("Fillate"),
+      url('../assets/fonts/Fillate.ttf') format("truetype");
+    font-weight: normal;
+  }

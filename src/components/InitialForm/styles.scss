@@ -1,0 +1,16 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+
+@import '../../styles/variables';
+
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+.logo-trip {
+    font-weight: bold;
+    color: $primary-color;
+    font-size: 1.5em;
+}
+.logo-easy {
+    color: $secondary-color;
+    font-size: 1em;
+}
