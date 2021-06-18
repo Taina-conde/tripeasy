@@ -6,11 +6,17 @@
 @import "../../../node_modules/bootstrap/scss/mixins";
 
 .logo-trip {
-    font-weight: bold;
+    
     color: $primary-color;
     font-size: 1.5em;
+    font-family: "Fillate"
+    ;
 }
 .logo-easy {
     color: $secondary-color;
     font-size: 1em;
+    text-transform: lowercase;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    
 }
