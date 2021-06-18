@@ -12,7 +12,7 @@ const InitialForm = () => {
     setSignUp(!signUp);
   };
   return (
-    <Container >
+    <Container>
       <h1>
         <span className = "logo-trip">Trip</span>
         <span className = "logo-easy">Easy</span>

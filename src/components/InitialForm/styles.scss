@@ -1,22 +1,56 @@
 @import "../../../node_modules/bootstrap/scss/functions";
 
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 
 .logo-trip {
-    
-    color: $primary-color;
-    font-size: 1.5em;
-    font-family: "Fillate"
-    ;
+  color: $primary-color;
+  font-size: 1.5em;
+  font-family: "Fillate";
 }
 .logo-easy {
-    color: $secondary-color;
-    font-size: 1em;
-    text-transform: lowercase;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
-    
+  color: $secondary-color;
+  font-size: 1em;
+  text-transform: lowercase;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+}
+
+.col-form-label {
+ border-bottom: $border-light;
+ text-align: center;
+}
+.form-control {
+    background-color: transparent;
+    border: none;
+    border-bottom: $border-light;
+    border-radius: unset;
+    height: 30px;
+
+}
+.btn {
+    border-radius: unset;
+    border: unset;
+
+}
+.btn-primary {
+    background-color: transparent;
+    border: $border-dark;
+    text-transform: uppercase;
+    color: black;
+
+}
+.btn-secondary {
+    background-color: transparent;
+    border: unset;
+    border-bottom: $border-dark;
+    color: black;
+}
+
+@include media-breakpoint-up(md) {
+  .container {
+    width: 60%;
+  }
 }

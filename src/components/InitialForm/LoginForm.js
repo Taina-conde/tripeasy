@@ -39,7 +39,7 @@ const LoginForm = (props) => {
   return (
     <Form noValidate onSubmit={formik.handleSubmit}>
       <Form.Group as={Row} className="mb-3" controlId="formEmail">
-        <Form.Label column xs={1} className="p-0 text-right ">
+        <Form.Label column xs={1} className="p-0">
           <HiMail size={20} />
         </Form.Label>
         <Col xs={11}>
@@ -60,7 +60,7 @@ const LoginForm = (props) => {
       </Form.Group>
 
       <Form.Group as={Row} className="mb-3" controlId="formPassword">
-        <Form.Label column xs={1} className="p-0 text-right ">
+        <Form.Label column xs={1} className="p-0">
           <HiLockClosed size={20} />
         </Form.Label>
         <Col xs={11}>
@@ -83,7 +83,7 @@ const LoginForm = (props) => {
 
       <Row className="justify-content-center">
         <Col xs={4} lg={12} className="text-right text-lg-center p-0">
-          <Button type="submit" onClick={formik.handleSubmit}>
+          <Button variant = "primary" type="submit" onClick={formik.handleSubmit}>
             Login
           </Button>
         </Col>
@@ -91,7 +91,7 @@ const LoginForm = (props) => {
           or
         </Col>
         <Col xs={4} lg={12} className="text-lg-center p-0">
-          <Button type="button" onClick={() => onToggleSignUp()}>
+          <Button variant = "secondary" type="button" onClick={() => onToggleSignUp()}>
             Sign Up
           </Button>
         </Col>
