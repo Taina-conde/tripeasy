@@ -60,6 +60,11 @@
     border-bottom: $border-dark;
     color: black;
 }
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: $primary-color;
+    border-color: white;
+}
 
 @include media-breakpoint-up(md) {
   .container {
