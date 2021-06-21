@@ -21,4 +21,6 @@ To get started using this App:
 * Sass
 * Formik
 
+## Dependencies
+
 
