@@ -7,6 +7,7 @@
 
 .container {
     width: 90%;
+    align-items: center;
 }
 .logo-trip {
   color: $primary-color;
@@ -44,11 +45,7 @@
     border: $border-dark;
     text-transform: uppercase;
     color: black;
-    &:hover  {
-        background-color: $primary-color;
-        border-color: white;
-    }
-    &:active {
+    &:hover, &:focus  {
         background-color: $primary-color;
         border-color: white;
     }
