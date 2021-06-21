@@ -4,6 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { HiMail, HiUser, HiLockClosed } from "react-icons/hi";
+import CarouselCustom from "../CarouselCustom";
 
 const SignUpForm = (props) => {
   const { onToggleSignUp } = props;
@@ -103,6 +104,8 @@ const SignUpForm = (props) => {
           <Form.Control.Feedback type="invalid">
             {formik.errors.password}
           </Form.Control.Feedback>
+        </Col>
+        <Col xs={12}>
           <Form.Text className="text-muted">
             Choose a password between 8 to 15 characters which contain at least
             one lowercase letter, one uppercase letter, one numeric digit, and
@@ -113,7 +116,7 @@ const SignUpForm = (props) => {
 
       <Row className="justify-content-center">
         <Col xs={4} lg={12} className="text-right text-lg-center p-0">
-          <Button variant = "primary" type="submit" onClick={formik.handleSubmit}>
+          <Button variant="primary" type="submit" onClick={formik.handleSubmit}>
             Sign Up
           </Button>
         </Col>
@@ -121,7 +124,11 @@ const SignUpForm = (props) => {
           or
         </Col>
         <Col xs={4} lg={12} className="text-lg-center p-0">
-          <Button variant = "secondary" type="button" onClick={() => onToggleSignUp()}>
+          <Button
+            variant="secondary"
+            type="button"
+            onClick={() => onToggleSignUp()}
+          >
             Login
           </Button>
         </Col>
