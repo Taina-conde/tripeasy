@@ -12,7 +12,7 @@ function App() {
         <Col className = "p-0" xs = {12} lg = {{span: 6, order: "last"}}>
           <CarouselCustom />
         </Col>
-        <Col className = "p-0" xs = {12} lg = {6} >
+        <Col className = "p-0 mt-5" xs = {12} lg = {6} >
           <InitialForm />
         </Col>
       </Row>
