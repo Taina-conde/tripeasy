@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import "./styles.scss";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
 const InitialForm = () => {
   const [signUp, setSignUp] = useState(true);
@@ -35,6 +36,14 @@ const InitialForm = () => {
             <SignInForm onToggleSignUp={toggleSignUpHandler} />
           )}
         </Col>
+      </Row>
+      <Row className = "download-links">
+        <Button type = "button">
+          Apple store
+        </Button>
+        <Button type = "button">
+            google play
+        </Button>
       </Row>
     </Container>
   );
