@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# TripEasy
+
+
 
 
 
@@ -10,4 +12,13 @@ To get started using this App:
 * `cd tripeasy`
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
+
+## Tech Stack
+
+* JavaScript
+* React
+* Bootstrap
+* Sass
+* Formik
+
 
