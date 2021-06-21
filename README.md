@@ -4,16 +4,17 @@
 
 
 
-## Instructions
 
-To get started using this App:
+## Instruções:
 
-* clone this repository with `git clone https://github.com/Taina-conde/tripeasy.git`
+Para executar o projeto:
+
+* clone este repositório com `git clone https://github.com/Taina-conde/tripeasy.git`
 * `cd tripeasy`
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+* instale todas as dependências com `npm install`
+* inicie o ambiente de desenvolvimento com `npm start`
 
-## Tech Stack
+## Tecnologias Usadas
 
 * JavaScript
 * React
@@ -21,6 +22,8 @@ To get started using this App:
 * Sass
 * Formik
 
-## Dependencies
+## Dependências
+
+
 
 
