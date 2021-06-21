@@ -1,10 +1,6 @@
 # TripEasy
 
-
-
-
-
-
+Bem-vindo ao TripEasy! Esse app foi desenvolvido para te auxiliar a gerenciar suas viagens de forma fácil e não precisar se estressar com imprevistos durante suas tão merecidas férias. 
 
 ## Instruções:
 
