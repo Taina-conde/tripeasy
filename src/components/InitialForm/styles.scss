@@ -5,6 +5,9 @@
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 
+.container {
+    width: 90%;
+}
 .logo-trip {
   color: $primary-color;
   font-size: 1.5em;
@@ -51,6 +54,6 @@
 
 @include media-breakpoint-up(md) {
   .container {
-    width: 60%;
+    width: 70%;
   }
 }
