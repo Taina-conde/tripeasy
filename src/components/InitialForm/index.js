@@ -13,8 +13,8 @@ const InitialForm = () => {
     setSignUp(!signUp);
   };
   return (
-    <Container className="mt-5">
-      <Row>
+    <Container>
+      <Row className = "mb-5">
         <Col>
           <h1>
             <span className="logo-trip">Trip</span>
@@ -22,7 +22,7 @@ const InitialForm = () => {
           </h1>
         </Col>
       </Row>
-      <Row>
+      <Row className = "mb-3">
         <Col>
           <h2>{signUp ? "Create your account" : "Sign in "}</h2>
         </Col>

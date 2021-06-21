@@ -81,7 +81,7 @@ const LoginForm = (props) => {
         </Col>
       </Form.Group>
 
-      <Row className="justify-content-center">
+      <Row className="justify-content-center mt-5">
         <Col xs={4} lg={12} className="text-right text-lg-center p-0">
           <Button variant = "primary" type="submit" onClick={formik.handleSubmit}>
             Login
