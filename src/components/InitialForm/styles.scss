@@ -36,6 +36,7 @@
 .btn {
     border-radius: unset;
     border: unset;
+    
 
 }
 .btn-primary {
@@ -43,6 +44,14 @@
     border: $border-dark;
     text-transform: uppercase;
     color: black;
+    &:hover  {
+        background-color: $primary-color;
+        border-color: white;
+    }
+    &:active {
+        background-color: $primary-color;
+        border-color: white;
+    }
 
 }
 .btn-secondary {

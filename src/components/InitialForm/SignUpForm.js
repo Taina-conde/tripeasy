@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import { HiMail, HiUser, HiLockClosed } from "react-icons/hi";
-import CarouselCustom from "../CarouselCustom";
+
 
 const SignUpForm = (props) => {
   const { onToggleSignUp } = props;
